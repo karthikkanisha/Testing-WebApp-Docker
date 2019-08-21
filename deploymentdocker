@@ -1,0 +1,30 @@
+node{
+    stage("Git Clone"){
+        git credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/KRSIVARAMKRISHNAN/Testing-WebApp-Docker.git'
+        
+    }
+    stage("Maven Clean Build"){
+        
+        def mavenHome = tool name: "Maven-3.6.1", type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn"
+        sh "${mavenCMD} clean package"
+    }
+    stage("Build Docker Image"){
+        sh 'docker build -t krsivaramkrishnan/testing-webapp .'
+    }
+    stage('Push Docker Image'){
+        withCredentials([string(credentialsId: 'Docker_Hub_PWD', variable: 'Docker_Hub_Pwd')]) {
+          sh "docker login -u krsivaramkrishnan -p ${Docker_Hub_Pwd}"
+        }
+        sh 'docker push krsivaramkrishnan/testing-webapp'
+     }
+     stage("Deploy Docker image on Deployment Server"){
+         def dockerRun = ' docker run  -d -p 8080:8080 --name testing-webapp krsivaramkrishnan/testing-webapp'
+      sshagent(['Docker_Server_SSH_Key']) {
+       sh 'ssh -o StrictHostKeyChecking=no deploy@192.168.24.143 docker stop testing-webapp || true'
+       sh 'ssh  deploy@192.168.24.143 docker rm testing-webapp || true'
+       sh 'ssh  deploy@192.168.24.143 docker rmi -f  $(docker images -q) || true'
+       sh "ssh  deploy@192.168.24.143 ${dockerRun}"
+      }   
+     }
+}
