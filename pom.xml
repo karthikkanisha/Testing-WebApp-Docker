@@ -29,7 +29,19 @@
 		<sonar.host.url>http://192.168.24.143:9000/</sonar.host.url>
                 <sonar.login>da626a8342a0a07eb3512260ee7b730c0a148244</sonar.login>
 	</properties>
-
+	<!-- Nexus Repo Remote & Proxy -->
+         <repositories>
+                    <!-- <repository>
+                              <id>deploymentRepo</id>
+                              <name>Test-Remote</name>
+                              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-Remote/</url>
+                    </repository> -->
+                     <repository>
+                              <id>deploymentRepo</id>
+                              <name>Test-Proxy</name>
+                              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-Proxy/</url>
+                    </repository>
+         </repositories>
 	<dependencies>
 
 		<!-- test dependencies -->
@@ -113,6 +125,21 @@
 	      <url>http://13.235.8.113:8081/repository/flipkart-snapshot/</url>
 	    </snapshotRepository>
 	</distributionManagement> -->
+	<!-- Nexus Releases & Snapshot -->
+	<distributionManagement>
+            <repository>
+              <id>deploymentRepo</id>
+              <name>Mithun Technologies Releases Nexus Repository</name>
+           <!--   <url>http://13.233.59.78:8081/repository/paytm-releases/</url> -->
+              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-release/</url>
+            </repository>
+            <snapshotRepository>
+              <id>deploymentRepo</id>
+              <name>Mithun Technologies Snapshot Nexus Repository </name>
+              <!-- <url>http://13.233.59.78:8081/repository/paytm-snapshot/</url> -->
+              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-snapshot/</url>
+            </snapshotRepository>
+        </distributionManagement>
 	
 	<build>
 		<plugins>
