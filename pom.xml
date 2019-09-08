@@ -13,7 +13,7 @@
 	<description>Maven Web Project</description>
 
 	<organization>
-		<name>Mithun Technologies</name>
+		<name>Testing Team</name>
 		<url>http://mithuntechnologies.com/</url>
 	</organization>
 
@@ -29,7 +29,7 @@
 		<sonar.host.url>http://192.168.24.143:9000/</sonar.host.url>
                 <sonar.login>da626a8342a0a07eb3512260ee7b730c0a148244</sonar.login>
 	</properties>
-	<!-- Nexus Repo Remote & Proxy -->
+	<!-- Nexus Repo Remote & Proxy Details-->
          <repositories>
                     <!-- <repository>
                               <id>deploymentRepo</id>
