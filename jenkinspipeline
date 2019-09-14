@@ -1,0 +1,53 @@
+node{
+  echo "GitHub BranhName ${env.BRANCH_NAME}"
+  echo "Jenkins Job Number ${env.BUILD_NUMBER}"
+  echo "Jenkins Node Name ${env.NODE_NAME}"
+  
+  echo "Jenkins Home ${env.JENKINS_HOME}"
+  echo "Jenkins URL ${env.JENKINS_URL}"
+  echo "JOB Name ${env.JOB_NAME}"
+  
+  properties([
+    buildDiscarder(logRotator(numToKeepStr: '3')),
+    pipelineTriggers([
+        pollSCM('* * * * *')
+    ])
+  ])
+    stage("Git Clone"){
+        git credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/KRSIVARAMKRISHNAN/Testing-WebApp-Docker.git'
+        
+    }
+    stage("Build"){
+        
+        def mavenHome = tool name: "Maven-3.6.1", type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn"
+        sh "${mavenCMD} clean package"
+    }
+    stage("SonarQube"){
+        
+        def mavenHome = tool name: "Maven-3.6.1", type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn"
+        sh "${mavenCMD} sonar:sonar"
+    }
+    stage("UploadArtifacttoNexus"){
+        
+        def mavenHome = tool name: "Maven-3.6.1", type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn"
+        sh "${mavenCMD} deploy"
+    }
+    stage('DeploytoTomcat'){
+
+   sshagent(['Docker_Server_SSH_Key']) 
+   {
+     sh "scp -o StrictHostKeyChecking=no target/maven-web-application-1.5.war deploy@192.168.24.143:/opt/apache-tomcat-9.0.24/webapps/maven-web-application-1.5.war"
+   }
+  }
+  stage('EmailNotification'){
+      emailext body: '''Build is Over
+
+Thanks
+KRSivaRamKRISHNAN''', subject: 'Build is Over', to: 'sivaramkrishnankr@gmail.com'
+  }
+  
+    
+}
