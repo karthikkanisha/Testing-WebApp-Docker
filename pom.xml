@@ -26,7 +26,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Sonar Config(Manual) -->
-		<sonar.host.url>http://3.124.1.74:9000//</sonar.host.url>
+		<sonar.host.url>http://3.124.1.74:9000/</sonar.host.url>
                 <sonar.login>2ba8c4f0c2ed8fa7abbb271a2dfb6e8ce65755c0</sonar.login>
 	</properties>
 	<!-- Nexus Repo Remote & Proxy Details-->
