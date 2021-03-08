@@ -65,7 +65,7 @@
 
 	<hr>
 	<footer>
-		<p>&copy; Mithun Technologies 2018</p>
+		<p>&copy; demo </p>
 	</footer>
 </div>
 
