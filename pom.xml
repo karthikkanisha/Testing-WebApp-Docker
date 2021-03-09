@@ -8,13 +8,13 @@
 	<version>1.5</version>
 	
 	<name>Maven Web Application</name>
-	<url>http://mithuntechnologies.com</url>
+	<url>http://tests.com</url>
 	
 	<description>Maven Web Project</description>
 
 	<organization>
 		<name>Testing Team</name>
-		<url>http://mithuntechnologies.com/</url>
+		<url>http://tests.com/</url>
 	</organization>
 
 	<properties>
@@ -116,12 +116,12 @@
 	<!-- <distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <name> Releases Nexus Repository</name>
 	      <url>http://18.185.79.5:8081/repository/maven-releases/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <name> Snapshot Nexus Repository </name>
 	      <url>http://18.185.79.5:8081/repository/maven-snapshots/</url>
 	    </snapshotRepository>
 	</distributionManagement> -->
@@ -129,13 +129,13 @@
 	<distributionManagement>
             <repository>
               <id>deploymentRepo</id>
-              <name>Mithun Technologies Releases Nexus Repository</name>
+              <name>Releases Nexus Repository</name>
            <!--   <url>http://13.233.59.78:8081/repository/paytm-releases/</url> -->
               <url>http://18.185.79.5:8081/repository/maven-releases/</url>
             </repository>
             <snapshotRepository>
               <id>deploymentRepo</id>
-              <name>Mithun Technologies Snapshot Nexus Repository </name>
+              <name>Snapshot Nexus Repository </name>
               <!-- <url>http://18.185.79.5:8081/repository/maven-snapshots/</url> -->
               <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-snapshot/</url>
             </snapshotRepository>
