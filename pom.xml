@@ -117,7 +117,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://http://18.185.79.5:8081/repository/maven-releases/</url>
+	      <url>http://18.185.79.5:8081/repository/maven-releases/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
@@ -130,8 +130,8 @@
             <repository>
               <id>deploymentRepo</id>
               <name>Mithun Technologies Releases Nexus Repository</name>
-           <!--   <url>http://http://18.185.79.5:8081/repository/maven-releases/</url> -->
-              <url>http://http://18.185.79.5:8081/repository/maven-releases/</url>
+           <!--   <url>http://18.185.79.5:8081/repository/maven-releases/</url> -->
+              <url>http://18.185.79.5:8081/repository/maven-releases/</url>
             </repository>
             <snapshotRepository>
               <id>deploymentRepo</id>
