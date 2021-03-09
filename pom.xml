@@ -34,12 +34,12 @@
                     <!-- <repository>
                               <id>deploymentRepo</id>
                               <name>Test-Remote</name>
-                              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-Remote/</url>
+                              <url>http://18.185.79.5:8081/repository/Test-Remote/</url>
                     </repository> -->
                      <repository>
                               <id>deploymentRepo</id>
                               <name>Test-Proxy</name>
-                              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-Proxy/</url>
+                              <url>http://18.185.79.5:8081/repository/Test-Proxy/</url>
                     </repository>
          </repositories>
 	<dependencies>
@@ -131,7 +131,7 @@
               <id>deploymentRepo</id>
               <name>Mithun Technologies Releases Nexus Repository</name>
            <!--   <url>http://http://18.185.79.5:8081/repository/maven-releases/</url> -->
-              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-release/</url>
+              <url>http://http://18.185.79.5:8081/repository/maven-releases/</url>
             </repository>
             <snapshotRepository>
               <id>deploymentRepo</id>
