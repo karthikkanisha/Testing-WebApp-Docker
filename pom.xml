@@ -8,13 +8,13 @@
 	<version>1.5</version>
 	
 	<name>Maven Web Application</name>
-	<url>http://tests.com</url>
+	<url>http://mithuntechnologies.com</url>
 	
 	<description>Maven Web Project</description>
 
 	<organization>
 		<name>Testing Team</name>
-		<url>http://tests.com/</url>
+		<url>http://mithuntechnologies.com/</url>
 	</organization>
 
 	<properties>
@@ -26,8 +26,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Sonar Config(Manual) -->
-		<sonar.host.url>http://3.124.1.74:9000/</sonar.host.url>
-                <sonar.login>2ba8c4f0c2ed8fa7abbb271a2dfb6e8ce65755c0</sonar.login>
+		<sonar.host.url>http://3.120.177.153:9000/</sonar.host.url>
+                <sonar.login>f6632bab34b55033cf7f95625b9295ecc16c288c</sonar.login>
 	</properties>
 	<!-- Nexus Repo Remote & Proxy Details-->
          <repositories>
@@ -116,12 +116,12 @@
 	<!-- <distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name> Releases Nexus Repository</name>
-	      <url>http://18.185.79.5:8081/repository/maven-releases/</url>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://http://18.185.79.5:8081/repository/maven-releases/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name> Snapshot Nexus Repository </name>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
 	      <url>http://18.185.79.5:8081/repository/maven-snapshots/</url>
 	    </snapshotRepository>
 	</distributionManagement> -->
@@ -129,15 +129,15 @@
 	<distributionManagement>
             <repository>
               <id>deploymentRepo</id>
-              <name>Releases Nexus Repository</name>
-           <!--   <url>http://13.233.59.78:8081/repository/paytm-releases/</url> -->
-              <url>http://18.185.79.5:8081/repository/maven-releases/</url>
+              <name>Mithun Technologies Releases Nexus Repository</name>
+           <!--   <url>http://http://18.185.79.5:8081/repository/maven-releases/</url> -->
+              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-release/</url>
             </repository>
             <snapshotRepository>
               <id>deploymentRepo</id>
-              <name>Snapshot Nexus Repository </name>
-              <!-- <url>http://18.185.79.5:8081/repository/maven-snapshots/</url> -->
-              <url>http://192.168.24.140:8081/krsivaramkrishnan/repository/Test-snapshot/</url>
+              <name>Mithun Technologies Snapshot Nexus Repository </name>
+              <!-- <url>http://13.233.59.78:8081/repository/paytm-snapshot/</url> -->
+              <url>http://18.185.79.5:8081/repository/maven-snapshots/</url>
             </snapshotRepository>
         </distributionManagement>
 	
