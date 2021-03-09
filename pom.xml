@@ -34,12 +34,12 @@
                     <!-- <repository>
                               <id>deploymentRepo</id>
                               <name>Test-Remote</name>
-                              <url>http://18.185.79.5:8081/repository/maven-public/</url>
+                              <url>http://18.185.79.5:8081/repository/Test-Remote/</url>
                     </repository> -->
                      <repository>
                               <id>deploymentRepo</id>
                               <name>Test-Proxy</name>
-                              <url>http://18.185.79.5:8081/repository/maven-public/</url>
+                              <url>http://18.185.79.5:8081/repository/Test-Proxy/</url>
                     </repository>
          </repositories>
 	<dependencies>
@@ -117,12 +117,12 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://18.185.79.5:8081/repository/maven-public/</url>
+	      <url>http://18.185.79.5:8081/repository/Test-Remote/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://18.185.79.5:8081/repository/maven-snapshots/</url>
+	      <url>http://18.185.79.5:8081/repository/Test-Proxy/</url>
 	    </snapshotRepository>
 	</distributionManagement> -->
 	<!-- Nexus Releases & Snapshot -->
@@ -130,14 +130,14 @@
             <repository>
               <id>deploymentRepo</id>
               <name>Mithun Technologies Releases Nexus Repository</name>
-           <!--   <url>http://18.185.79.5:8081/repository/maven-releases/</url> -->
-              <url>http://18.185.79.5:8081/repository/maven-public/</url>
+           <!--   <url>http://18.185.79.5:8081/repository/Test-Remote/</url> -->
+              <url>http://18.185.79.5:8081/repository/Test-Remote/</url>
             </repository>
             <snapshotRepository>
               <id>deploymentRepo</id>
               <name>Mithun Technologies Snapshot Nexus Repository </name>
-              <!-- <url>http://13.233.59.78:8081/repository/paytm-snapshot/</url> -->
-              <url>http://18.185.79.5:8081/repository/maven-snapshots/</url>
+              <!-- <url>http://18.185.79.5:8081/repository/Test-Proxy/</url> -->
+              <url>http://18.185.79.5:8081/repository/Test-Proxy/</url>
             </snapshotRepository>
         </distributionManagement>
 	
