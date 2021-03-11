@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: javawebappcontainer
-    image: 18.196.120.254:8082/mavenapp
+    image: karthikkanish/maven-web-app
     ports:
     - containerPort: 8080
 ---
