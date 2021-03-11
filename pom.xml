@@ -26,7 +26,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Sonar Config(Manual) -->
-		<sonar.host.url>http://3.124.1.74:9000/</sonar.host.url>
+		<sonar.host.url>http://18.192.121.135:9000/</sonar.host.url>
                 <sonar.login>f6632bab34b55033cf7f95625b9295ecc16c288c</sonar.login>
 	</properties>
 	<!-- Nexus Repo Remote & Proxy Details-->
@@ -34,12 +34,12 @@
                     <!-- <repository>
                               <id>deploymentRepo</id>
                               <name>Test-Remote</name>
-                              <url>http://18.185.79.5:8081/repository/javawebapp-release/</url>
+                              <url>http://18.196.120.254:8081/repository/javawebapp-release/</url>
                     </repository> -->
                      <repository>
                               <id>deploymentRepo</id>
                               <name>Test-Proxy</name>
-                              <url>http://18.185.79.5:8081/repository/javawebapp-snapshot/</url>
+                              <url>http://18.196.120.254:8081/repository/javawebapp-snapshot/</url>
                     </repository>
          </repositories>
 	<dependencies>
@@ -117,12 +117,12 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://18.185.79.5:8081/repository/Test-Remote/</url>
+	      <url>http://18.196.120.254:8081/repository/Test-Remote/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://18.185.79.5:8081/repository/Test-Proxy/</url>
+	      <url>http://18.196.120.254:8081/repository/Test-Proxy/</url>
 	    </snapshotRepository>
 	</distributionManagement> -->
 	<!-- Nexus Releases & Snapshot -->
@@ -130,14 +130,14 @@
             <repository>
               <id>deploymentRepo</id>
               <name>Mithun Technologies Releases Nexus Repository</name>
-           <!--   <url>http://18.185.79.5:8081/repository/Test-Remote/</url> -->
-              <url>http://18.185.79.5:8081/repository/javawebapp-release/</url>
+           <!--   <url>http://18.196.120.254:8081/repository/Test-Remote/</url> -->
+              <url>http://18.196.120.254:8081/repository/javawebapp-release/</url>
             </repository>
             <snapshotRepository>
               <id>deploymentRepo</id>
               <name>Mithun Technologies Snapshot Nexus Repository </name>
-              <!-- <url>http://18.185.79.5:8081/repository/Test-Proxy/</url> -->
-              <url>http://18.185.79.5:8081/repository/javawebapp-snapshot/</url>
+              <!-- <url>http://18.196.120.254:8081/repository/Test-Proxy/</url> -->
+              <url>http://18.196.120.254:8081/repository/javawebapp-snapshot/</url>
             </snapshotRepository>
         </distributionManagement>
 	
